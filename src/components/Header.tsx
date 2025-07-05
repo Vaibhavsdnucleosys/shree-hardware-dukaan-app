@@ -1,0 +1,47 @@
+import { Package, ShoppingCart, Users, BarChart3, Settings } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Header = () => {
+  return (
+    <header className="bg-gradient-primary text-white shadow-hardware">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div className="bg-white/20 p-3 rounded-lg">
+              <Package className="h-8 w-8" />
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold">श्री हार्डवेअर</h1>
+              <p className="text-white/80">हार्डवेअर आणि बिल्डिंग मटेरियल</p>
+            </div>
+          </div>
+          
+          <nav className="hidden md:flex items-center gap-2">
+            <Button variant="ghost-white">
+              <BarChart3 className="h-4 w-4 mr-2" />
+              डॅशबोर्ड
+            </Button>
+            <Button variant="ghost-white">
+              <Package className="h-4 w-4 mr-2" />
+              इन्व्हेंटरी
+            </Button>
+            <Button variant="ghost-white">
+              <ShoppingCart className="h-4 w-4 mr-2" />
+              विक्री
+            </Button>
+            <Button variant="ghost-white">
+              <Users className="h-4 w-4 mr-2" />
+              ग्राहक
+            </Button>
+            <Button variant="ghost-white">
+              <Settings className="h-4 w-4 mr-2" />
+              सेटिंग्ज
+            </Button>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

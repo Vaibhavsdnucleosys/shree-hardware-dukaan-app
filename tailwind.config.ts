@@ -61,7 +61,23 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Hardware Store Custom Colors
+				hardware: {
+					orange: 'hsl(var(--hardware-orange))',
+					blue: 'hsl(var(--hardware-blue))',
+					gray: 'hsl(var(--hardware-gray))',
+					green: 'hsl(var(--hardware-green))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-hero': 'var(--gradient-hero)'
+			},
+			boxShadow: {
+				'hardware': 'var(--shadow-hardware)',
+				'card-custom': 'var(--shadow-card)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
