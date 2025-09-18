@@ -16,37 +16,17 @@ const Login = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
-    try {
-      const { data, error } = isLogin 
-        ? await signIn(email, password)
-        : await signUp(email, password);
-
-      if (error) {
-        toast({
-          title: "त्रुटी",
-          description: error.message,
-          variant: "destructive",
-        });
-      } else {
-        toast({
-          title: "यशस्वी",
-          description: isLogin ? "लॉगिन यशस्वी झाले" : "नोंदणी यशस्वी झाली",
-        });
-        navigate("/");
-      }
-    } catch (error) {
-      toast({
-        title: "त्रुटी",
-        description: "काहीतरी चूक झाली",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
+    
+    // Static login - no validation needed
+    toast({
+      title: "यशस्वी",
+      description: "लॉगिन यशस्वी झाले",
+    });
+    
+    // Redirect to dashboard
+    navigate("/");
   };
 
   return (
