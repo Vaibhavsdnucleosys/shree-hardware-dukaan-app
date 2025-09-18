@@ -22,11 +22,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<ProtectedRoute><Index /></ProtectedRoute>} />
-          <Route path="/bills" element={<ProtectedRoute><Bills /></ProtectedRoute>} />
-          <Route path="/stock" element={<ProtectedRoute><Stock /></ProtectedRoute>} />
-          <Route path="/calculator" element={<ProtectedRoute><Calculator /></ProtectedRoute>} />
-          <Route path="/customers" element={<ProtectedRoute><Customers /></ProtectedRoute>} />
+          <Route path="/" element={<Index />} />
+          <Route path="/bills" element={<Bills />} />
+          <Route path="/stock" element={<Stock />} />
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/customers" element={<Customers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
